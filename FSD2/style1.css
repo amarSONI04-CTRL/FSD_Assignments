@@ -1,0 +1,109 @@
+/* Global */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a 20%, #2f2f2f 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Form Container */
+.container {
+  background: #fff;
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+h2 {
+  color: #111;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 1.6em;
+  letter-spacing: 1px;
+}
+
+/* Form Layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Each Input Group */
+.form-group {
+  text-align: left;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #c9a646;
+  box-shadow: 0 0 5px rgba(201, 166, 70, 0.5);
+  outline: none;
+}
+
+/* Button */
+button {
+  padding: 12px;
+  background: #111;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: #c9a646;
+  color: #111;
+  transform: scale(1.03);
+}
+
+/* Error Message */
+#errorMsg {
+  color: #c62828;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 30px 25px;
+  }
+}

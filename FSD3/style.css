@@ -1,0 +1,107 @@
+/* Neon personal profile theme (dark + cyan/purple glow) */
+body {
+  background: radial-gradient(circle at 10% 10%, #0f1724, #07070a 40%);
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* small scrollbar neon */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,#00ffff,#9b5de5);
+  border-radius: 10px;
+}
+
+/* neon heading */
+.neon-text {
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0,255,255,0.25), 0 0 20px rgba(155,93,229,0.18);
+}
+
+/* card look */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(0,255,255,0.06);
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+}
+
+/* profile avatar border glow */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 3px solid rgba(0,255,255,0.18);
+  box-shadow: 0 8px 30px rgba(0,255,255,0.06), 0 0 20px rgba(155,93,229,0.06);
+}
+
+/* name/title styles */
+.name {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+.title {
+  color: #cdeefc;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* small stat card */
+.stat {
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));
+  border: 1px solid rgba(0,255,255,0.04);
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.stat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 26px rgba(0,255,255,0.06);
+}
+
+/* inputs & buttons */
+.input-neo {
+  background: rgba(20,20,40,0.6);
+  border: 1px solid rgba(0,255,255,0.08);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  outline: none;
+}
+.input-neo:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 8px rgba(0,255,255,0.18);
+}
+
+.btn-neo {
+  background: linear-gradient(90deg, #00ffff, #9b5de5);
+  color: #05101b;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 8px 30px rgba(155,93,229,0.08);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn-neo:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 40px rgba(0,255,255,0.07);
+}
+
+/* small footer */
+.footer {
+  color: rgba(200, 230, 250, 0.5);
+  font-size: 13px;
+}
+
+/* responsive tweaks */
+@media (max-width: 720px) {
+  .avatar { width: 96px; height: 96px; border-radius: 16px; }
+  .name { font-size: 1.2rem; }
+}

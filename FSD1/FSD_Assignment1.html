@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neandethrals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a1a1a 20%, #2e2e2e 80%);
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Product Card */
+    .product-container {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      max-width: 460px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-container:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+    }
+
+    /* Title */
+    h1 {
+      font-size: 1.8em;
+      font-weight: 600;
+      color: #111;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    /* Image */
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Description */
+    p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    /* Price */
+    .price {
+      font-size: 1.9em;
+      font-weight: 600;
+      color: #c9a646;
+      margin-bottom: 25px;
+    }
+
+    /* Labels */
+    label {
+      font-weight: 500;
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 6px;
+      text-align: left;
+      color: #222;
+    }
+
+    /* Inputs and Selects */
+    select, input[type="text"] {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      outline: none;
+      margin-bottom: 10px;
+      transition: all 0.3s ease;
+    }
+
+    select:focus, input[type="text"]:focus {
+      border-color: #c9a646;
+      box-shadow: 0 0 6px rgba(201,166,70,0.5);
+    }
+
+    /* Button */
+    button {
+      width: 100%;
+      background-color: #111;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c9a646;
+      color: #111;
+      transform: scale(1.03);
+    }
+
+    /* Subtle Footer Text */
+    footer {
+      text-align: center;
+      color: #bbb;
+      font-size: 13px;
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-container">
+    <h1>Oversized T-Shirt</h1>
+    <img src="Blue_Tee.png" alt="Navy Blue Men's Oversized T-Shirt">
+    <p>Experience comfort and confidence in our premium oversized cotton T-shirt. A versatile staple for any look — minimalist, classy, and made to impress.</p>
+    <div class="price">$0.66</div>
+
+    <form>
+      <label for="sizes">Sizes Available:</label>
+      <select id="sizes" name="Sizes">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="XXL">XXL</option>
+        <option value="XXXL">XXXL</option>
+      </select>
+
+      <label for="qty">Quantity:</label>
+      <input type="text" id="qty" name="qty" placeholder="Enter quantity" required>
+
+      <button type="submit">Add To Cart</button>
+    </form>
+  </div>
+
+  <footer>© 2025 Neandethrals. All rights reserved.</footer>
+
+</body>
+</html>
