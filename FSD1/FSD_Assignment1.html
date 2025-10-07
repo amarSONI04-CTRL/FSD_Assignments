@@ -2,163 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Neandethrals</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration | Amar Soni</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Internal Custom CSS -->
   <style>
-    /* Global Styles */
+    /* Tag Selector: Overall Body */
     body {
-      margin: 0;
+      background: linear-gradient(135deg, #f0f4ff, #dfe9ff);
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1a1a1a 20%, #2e2e2e 80%);
-      color: #222;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
     }
 
-    /* Product Card */
-    .product-container {
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-      max-width: 460px;
-      padding: 30px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .product-container:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-    }
-
-    /* Title */
-    h1 {
-      font-size: 1.8em;
-      font-weight: 600;
-      color: #111;
+    /* ID Selector: Title */
+    #eventTitle {
+      font-weight: 700;
       letter-spacing: 1px;
-      margin-bottom: 18px;
     }
 
-    /* Image */
-    img {
-      width: 100%;
-      height: auto;
+    /* ID Selector: Card Styling */
+    #registrationCard {
       border-radius: 15px;
-      margin-bottom: 20px;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background-color: #ffffff;
+      border: 2px solid #0d6efd;
     }
 
-    img:hover {
-      transform: scale(1.04);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
-
-    /* Description */
-    p {
-      color: #555;
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 18px;
-    }
-
-    /* Price */
-    .price {
-      font-size: 1.9em;
+    /* Class Selector: Labels */
+    .form-label {
       font-weight: 600;
-      color: #c9a646;
-      margin-bottom: 25px;
+      color: #0d6efd;
     }
 
-    /* Labels */
-    label {
-      font-weight: 500;
-      display: block;
-      margin-top: 12px;
-      margin-bottom: 6px;
-      text-align: left;
-      color: #222;
+    /* Class Selector: Form Controls */
+    .form-control, .form-select {
+      border-radius: 10px;
+      border: 1px solid #b0c4de;
     }
 
-    /* Inputs and Selects */
-    select, input[type="text"] {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 15px;
-      outline: none;
-      margin-bottom: 10px;
-      transition: all 0.3s ease;
-    }
-
-    select:focus, input[type="text"]:focus {
-      border-color: #c9a646;
-      box-shadow: 0 0 6px rgba(201,166,70,0.5);
-    }
-
-    /* Button */
-    button {
-      width: 100%;
-      background-color: #111;
-      color: #fff;
-      padding: 14px;
+    /* ID Selector: Button */
+    #registerBtn {
+      background: linear-gradient(90deg, #0d6efd, #6610f2);
       border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      margin-top: 15px;
-      transition: all 0.3s ease;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    button:hover {
-      background-color: #c9a646;
-      color: #111;
-      transform: scale(1.03);
+    #registerBtn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(13, 110, 253, 0.3);
     }
 
-    /* Subtle Footer Text */
+    /* Footer styling */
     footer {
-      text-align: center;
-      color: #bbb;
-      font-size: 13px;
-      position: absolute;
-      bottom: 15px;
-      width: 100%;
+      font-size: 14px;
+    }
+
+    /* Responsive tweak */
+    @media (max-width: 576px) {
+      #eventTitle {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="product-container">
-    <h1>Oversized T-Shirt</h1>
-    <img src="Blue_Tee.png" alt="Navy Blue Men's Oversized T-Shirt">
-    <p>Experience comfort and confidence in our premium oversized cotton T-shirt. A versatile staple for any look — minimalist, classy, and made to impress.</p>
-    <div class="price">$0.66</div>
+  <!-- Header -->
+  <header class="bg-dark text-white text-center py-4 mb-4">
+    <h1 id="eventTitle">Tech Horizons 2025 – Workshop Registration</h1>
+    <p class="lead">Register below to secure your spot in our exciting sessions!</p>
+  </header>
 
-    <form>
-      <label for="sizes">Sizes Available:</label>
-      <select id="sizes" name="Sizes">
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-        <option value="XL">XL</option>
-        <option value="XXL">XXL</option>
-        <option value="XXXL">XXXL</option>
-      </select>
+  <!-- Registration Form Container -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8 col-sm-10">
+        <div class="card p-4 shadow-lg" id="registrationCard">
+          <h2 class="text-center mb-3">Event Registration Form</h2>
 
-      <label for="qty">Quantity:</label>
-      <input type="text" id="qty" name="qty" placeholder="Enter quantity" required>
+          <form id="registrationForm">
 
-      <button type="submit">Add To Cart</button>
-    </form>
+            <!-- Name -->
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Phone -->
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <!-- Workshop Session (Dropdown) -->
+            <div class="mb-3">
+              <label for="session" class="form-label">Select Workshop Session</label>
+              <select class="form-select" id="session" required>
+                <option value="" selected disabled>Choose a session</option>
+                <option value="AI">AI & Machine Learning</option>
+                <option value="Cybersecurity">Cybersecurity Essentials</option>
+                <option value="WebDev">Modern Web Development</option>
+                <option value="GameDev">Game Development Bootcamp</option>
+              </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg" id="registerBtn">Register Now</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <footer>© 2025 Neandethrals. All rights reserved.</footer>
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-5 bg-dark text-white">
+    <p>&copy; 2025 Tech Horizons | Developed by Amar Soni</p>
+  </footer>
 
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
